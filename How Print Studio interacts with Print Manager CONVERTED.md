@@ -7,7 +7,7 @@ Autodesk Print Studio makes multiple calls to Print Manager to get the list of p
 
 This call returns the following data:
 
-{  
+``{  
    "api":{  
       "major":1,
       "minor":0,
@@ -23,7 +23,7 @@ This call returns the following data:
       **"schema":4,
       "revision":7**
    }
-}
+}``
 
 The schema and revision numbers indicate whether Print Studio's cached database needs updating. If the returned schema / revision number combination is higher than the one stored in Print Studio's cached database, Print Studio requests new printer types, materials and profiles from Print Manager and stores this data and the version information in a new cached database.
 If the version information is the same as the version information in its cached database, Print Studio uses the information already retrieved from the cached database.
