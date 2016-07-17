@@ -81,7 +81,7 @@ Once this format is generated, Print Studio makes this call to Print Manager:
 
 with these inputs:
 
-Job Name
+``Job Name``
 
 ``File ID`` (the neutral file)
 
