@@ -1,4 +1,4 @@
-# How Print Studio works with Print Manager
+# How Print Studio interacts with Print Manager
 
 In this guide, we explain in depth how Print Studio and Print Manager work together. If you are interested in integrating your printer with Spark Print Manager and Print Studio, you may want to read the topic [Integrate Your Printer Model](https://spark.autodesk.com/developers/reference/printer-manufacturers/integrate-your-printer/integrate-your-printer-model).
 Autodesk Print Studio makes multiple calls to Print Manager to get the list of printer types, materials, profiles, and connected printers. However, the first call Print Studio makes at start up is this call:
