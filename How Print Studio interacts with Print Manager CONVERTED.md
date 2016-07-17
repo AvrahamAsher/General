@@ -32,6 +32,7 @@ Therefore, if you are making changes to print manager printer types, profiles an
 TIP: It's common to make many changes to the database during development. To avoid the tedious task of bumping the version information every time you need to preview outcomes, you can delete the cached database, forcing Print Studio to retrieve and use the new data. The location of the cached database is:
 
 For Windows: \AppData\Local\Autodesk\Print Studio\printDB
+
 For MacOS /Users//Library/Application Support/com.autodesk.spark.printstudio/printDB
 
 If the version information indicates that the local cache needs to be updated, Print Studio makes these three calls:
