@@ -20,25 +20,27 @@ This call returns the following data:
       "short_commit_id":"4ca019"
    },
    "print_definition":{  
-      "schema":4,
-      "revision":7
+      **"schema":4,
+      "revision":7**
    }
 }
 
 The schema and revision numbers indicate whether Print Studio's cached database needs updating. If the returned schema / revision number combination is higher than the one stored in Print Studio's cached database, Print Studio requests new printer types, materials and profiles from Print Manager and stores this data and the version information in a new cached database.
 If the version information is the same as the version information in its cached database, Print Studio uses the information already retrieved from the cached database.
-Therefore, if you are making changes to print manager printer types, profiles and materials you need to change this version information in the file [https://github.com/spark3dp/print-manager/blob/master/spark-print-data/version.json](https://github.com/spark3dp/print-manager/blob/master/spark-print-data/version.json).
+Therefore, if you are making changes to print manager printer types, profiles and materials you need to change this version information in the version file [https://github.com/spark3dp/print-manager/blob/master/spark-print-data/version.json](https://github.com/spark3dp/print-manager/blob/master/spark-print-data/version.json).
 
 TIP: It's common to make many changes to the database during development. To avoid the tedious task of bumping the version information every time you need to preview outcomes, you can delete the cached database, forcing Print Studio to retrieve and use the new data. The location of the cached database is:
 
-On Windows: \AppData\Local\Autodesk\Print Studio\printDB
-On MacOS /Users//Library/Application Support/com.autodesk.spark.printstudio/printDB
+For Windows: \AppData\Local\Autodesk\Print Studio\printDB
+For MacOS /Users//Library/Application Support/com.autodesk.spark.printstudio/printDB
 
 If the version information indicates that the local cache needs to be updated, Print Studio makes these three calls:
 
-http://localhost:9998/printdb/printertypes
-http://localhost:9998/printdb/profiles
-http://localhost:9998/printdb/materials
+<a href="http://localhost:9998/printdb/printertypes">http://localhost:9998/printdb/printertypes</a>
+
+<a href="http://localhost:9998/printdb/profiles">http://localhost:9998/printdb/profiles</a>
+
+<a href ="http://localhost:9998/printdb/materials">http://localhost:9998/printdb/materials</a>
 
 The data returned from these calls is stored in the JSON files listed below, which are part of the Print Manager data.
 Edit these files in order to add a printer.
@@ -53,7 +55,7 @@ Once these files have been edited, Print Studio can display the new printer's pr
 
 Print Studio can also display the printers that are connected. To do this, it calls Print Manager:
 
-http://localhost:9998/print/printers
+<a href="http://localhost:9998/print/printers">http://localhost:9998/print/printers</a>
 
 This call returns all the printers connected to Print Manager by USB, network, and serial connections,
 enabling Print Studio to display the connected printers in the Printers dialog:
@@ -75,7 +77,7 @@ or
 Setting the printer technology allows Print Manager to generate the appropriate neutral file format for the selected printer.
 Once this format is generated, Print Studio makes this call to Print Manager:
 
-http://localhost:9998/print/trays/translate
+<a href="http://localhost:9998/print/trays/translate">http://localhost:9998/print/trays/translate</a>
 
 with these inputs:
 
@@ -97,14 +99,14 @@ for more information about Spark Printable File Format Conversion and Translatio
 
 Once the printable file has been generated and sent to the printer, Print Studio commands Print Manager to create the job using the call:
 
-http://localhost:9998/print/jobs
+<a href="http://localhost:9998/print/jobs">http://localhost:9998/print/jobs</a>
 
 The input for this call includes the Printer ID, i.e. the ID of one of the connected printers.
 The response returns a job ID.
 
 When that job is created, the printable (file) is set using this call:
 
-http://localhost:9998/print/jobs/100/setPrintable
+<a href="http://localhost:9998/print/jobs/100/setPrintable">http://localhost:9998/print/jobs/100/setPrintable</a>
 
 with this input:
 
@@ -112,9 +114,9 @@ file_id (the printable file)
 
 Finally the printer is started using this call:
 
-http://localhost:9998/print/printers/10/print
+<a href="http://localhost:9998/print/printers/10/print">http://localhost:9998/print/printers/10/print</a>
 
 Control is handed over to Print Manager, which controls the job from this point on.
 Once the job has been handed over to the Print Manager, its status is displayed at:
 
-http://localhost:9998/console/#/printers.
+<a href="http://localhost:9998/console/#/printers">http://localhost:9998/console/#/printers</a>.
