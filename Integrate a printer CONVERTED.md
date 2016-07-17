@@ -14,7 +14,7 @@ The Print Manager workflow:
 
 For more information see [Print Manager](/developers/reference/desktop-applications/print-manager). Print Manager's source code is available at [https://github.com/spark3dp/print-manager](https://github.com/spark3dp/print-manager).
 
-Print Manager creates a local version of the Spark API that can be run on any desktop computer and does not require an internet connection. 
+Print Manager creates a local version of the Forge 3D Print API that can be run on any desktop computer and does not require an internet connection. 
 
 * * *
 
@@ -58,7 +58,7 @@ Print Studio outputs a file to the Print Manager containing <span>instructions
 
 Print Manager translates the Print Studio file into a printable file suitable for your printer. If your printer is not supported, you must add your translator.
 
-*   Spark GCODE translation is documented at [https://github.com/<wbr>spark3dp/print-manager/blob/<wbr>master/spark-print-mgr/<wbr>printableTranslation](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation).
+*   Forge GCODE translation is documented at [https://github.com/<wbr>spark3dp/print-manager/blob/<wbr>master/spark-print-mgr/<wbr>printableTranslation](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation).
     *   FDM translation **- **The FDM translator code can be found at [https://github.com/spark3dp/<wbr>print-manager/blob/master/<wbr>spark-print-mgr/<wbr>printableTranslation/<wbr>FDMTranslator.js](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation/FDMTranslator.js).  
         Translators exist for Makerbot, Dremel, Ultimaker and Typea. The source of these translators can be viewed at [https://github.com/<wbr>spark3dp/print-manager/blob/<wbr>master/spark-print-mgr/<wbr>printableTranslation/<wbr>translators](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation/translators)/.
     *   DLP translation **- **A translator converts this to the needs of the Ember Printer: see the source at [https://github.com/<wbr>spark3dp/print-manager/blob/<wbr>master/spark-print-mgr/<wbr>printableTranslation/<wbr>translators/Autodesk-Ember.js](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation/translators/Autodesk-Ember.js).   
@@ -252,7 +252,7 @@ The polygonal model of the print bed has the following features:
 
 ### 2. Icons and printer brand images
 
-Spark requires the following visuals for use in the Print Manager interface, for each type of printer, <span>placed in the [data folder](https://github.com/spark3dp/print-manager/tree/master/spark-print-data/data)of Print Manager:</span>
+Forge requires the following visuals for use in the Print Manager interface, for each type of printer, <span>placed in the [data folder](https://github.com/spark3dp/print-manager/tree/master/spark-print-data/data)of Print Manager:</span>
 
 <table class="ng-scope">
 
