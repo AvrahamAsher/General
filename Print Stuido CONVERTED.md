@@ -5,11 +5,11 @@ Autodesk Print Studio is a desktop application that offers sophisticated 3D prin
 
 To install Print Studio see the [Print Studio download page](https://github.com/spark3dp/print-manager/releases).
 
-If you are a 3D printer manufacturer<span> and want to integrate a 3D printer with Spark, please refer to [this guide](/developers/reference/printer-manufacturers/integrate-your-printer/integrate-your-printer-model "Printer Manufacturers").</span>
+If you are a 3D printer manufacturer<span> and want to integrate a 3D printer with Forge, please refer to [this guide](/developers/reference/printer-manufacturers/integrate-your-printer/integrate-your-printer-model "Printer Manufacturers").</span>
 
-Print Studio can be run as stand-alone software or integrated with your app to open a pre-loaded OBJ file, STL file or a Spark Tray object.  
+Print Studio can be run as stand-alone software or integrated with your app to open a pre-loaded OBJ file, STL file or a Forge 3D Print Tray object.  
 
-Print Studio installs a Windows_service / _Mac _daemon_ called the [Print Manager](/developers/reference/desktop-applications/print-manager)**.** Print Manager can be integrated into your app as a stand alone 3D printer manager able to automatically detect and connect to local 3D printers. Print Manager can also be used to run Spark APIs locally (without connecting to the internet).
+Print Studio installs a Windows_service / _Mac _daemon_ called the [Print Manager](/developers/reference/desktop-applications/print-manager)**.** Print Manager can be integrated into your app as a stand alone 3D printer manager able to automatically detect and connect to local 3D printers. Print Manager can also be used to run Forge 3D Print endpoints locally (without connecting to the internet).
 
 * * *
 
@@ -22,8 +22,8 @@ Print Studio installs a Windows_service / _Mac _daemon_ called the [Print Ma
     *   Calculates support material requirements.
     *   Optimizes slicing settings.
 4.  Calculates printing time and material requirements.
-5.  Automatically detects and connects local Spark-enabled 3D printers (using the Print Manager service, see below).
-6.  Can send the printer-ready file to a connected Spark-enabled 3D printer or download it for further work.
+5.  Automatically detects and connects local Forge-enabled 3D printers (using the Print Manager service, see below).
+6.  Can send the printer-ready file to a connected Forge-enabled 3D printer or download it for further work.
 7.  Monitors and controls print-job execution on connected 3D printers.
 
 ![Autodesk Print Studio](https://dp6mb85fgupxl.cloudfront.net/blog-prd-content/uploads/2015/07/05_preview_v02.png)
@@ -46,4 +46,4 @@ To be called from an app, Print Studio must be installed by the app-user.
 2.  **-yup** - Override Print Studio preference settings and read the imported model as if the y-axis is the up-vector.
 3.  **-zup** - Override Print Studio preference settings and read the imported model as if the z-axis is the up-vector.
 4.  **-units _[units]_** - Override Print Studio preference settings and read the imported model as if it is expressed in the specified units.  The [units] is handled as a second parameter, valid values for are 'mm', 'cm' or 'in'.
-5.  **-tray _[tray ID]_ - **Load the specified tray ID from the Spark server.  Note that the -yup, -zup, and -units options cannot be used with the -tray option. The [tray ID] is handled as a second parameter and must contain the Spark ID of a tray object.
+5.  **-tray _[tray ID]_ - **Load the specified tray ID from the Forge server.  Note that the -yup, -zup, and -units options cannot be used with the -tray option. The [tray ID] is handled as a second parameter and must contain the Forge ID of a tray object.
