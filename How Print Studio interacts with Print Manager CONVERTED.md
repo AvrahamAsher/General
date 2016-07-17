@@ -120,4 +120,4 @@ Finally the printer is started using this call:
 Control is handed over to Print Manager, which controls the job from this point on.
 Once the job has been handed over to the Print Manager, its status is displayed at:
 
-<a href="http://localhost:9998/console/#/printers">http://localhost:9998/console/#/printers</a>.
+<a href="http://localhost:9998/console/#/printers">http://localhost:9998/console/#/printers</a>
