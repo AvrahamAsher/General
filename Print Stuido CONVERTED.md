@@ -3,7 +3,7 @@
 
 Autodesk Print Studio is a desktop application that offers sophisticated 3D print preparation and printer delivery services for OBJ and STL models. 
 
-To install Print Studio see the [Print Studio download page](https://spark.autodesk.com/developers/showcase/d0716b0d-5cb4-4959-9f10-032be8591c2a).
+To install Print Studio see the [Print Studio download page](https://github.com/spark3dp/print-manager/releases).
 
 If you are a 3D printer manufacturer<span> and want to integrate a 3D printer with Spark, please refer to [this guide](/developers/reference/printer-manufacturers/integrate-your-printer/integrate-your-printer-model "Printer Manufacturers").</span>
 
