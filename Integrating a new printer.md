@@ -1,4 +1,5 @@
 Integrate Your Printer Model
+
 This document is for 3D printer manufacturers who wish to integrate a printer model with Print Manager desktop utility. You should read the Print Manager documentation before reading this page.
 Print Manager is an open-source utility program used by Print Studio, Print Manager supports FDM and DLP printers. 
 The Print Manager workflow:
