@@ -68,11 +68,11 @@ Print Manager is activated.
 Print Studio then generates the correct neutral printable format for the supported DLP or FDM printer being used,
 according to that printer's definition in the printertypes.json file where each “printer type” is declared to be either
 
-"technology": "DLP"
+``"technology": "DLP"``
 
 or
 
-"technology": "FDM"
+``"technology": "FDM"``
 
 Setting the printer technology allows Print Manager to generate the appropriate neutral file format for the selected printer.
 Once this format is generated, Print Studio makes this call to Print Manager:
@@ -83,13 +83,13 @@ with these inputs:
 
 Job Name
 
-File ID (the neutral file)
+``File ID`` (the neutral file)
 
-Printer Type ID
+``Printer Type ID``
 
-Profile ID
+``Profile ID``
 
-Material ID
+``Material ID``
 
 As a response to this call, Print Manager uses the Printer Type and ID to generate the printer file appropriate for the target printer.
 The name of this file is the returned value of the command, and the file is sent to the printer by Print Studio.
@@ -110,7 +110,7 @@ When that job is created, the printable (file) is set using this call:
 
 with this input:
 
-file_id (the printable file)
+``file_id`` (the printable file)
 
 Finally the printer is started using this call:
 
