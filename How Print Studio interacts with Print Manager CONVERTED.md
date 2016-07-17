@@ -92,7 +92,7 @@ with these inputs:
 
 ``Material ID``
 
-As a response to this call, Print Manager uses the Printer Type and ID to generate the printer file appropriate for the target printer.
+As a response to this call, Print Manager uses the ``Printer Type`` and ``ID`` to generate the printer file appropriate for the target printer.
 The name of this file is the returned value of the command, and the file is sent to the printer by Print Studio.
 
 See the readme [https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation/README.md](https://github.com/spark3dp/print-manager/blob/master/spark-print-mgr/printableTranslation/README.md).
